@@ -37,7 +37,7 @@ login = dash_auth.BasicAuth(app, userPasswordPairs)
 
 ##### Load the shapefile (from SOI) and convert it to geodataframe using geopandas. Projection used for this shapefile EPSG:32643 (UTM43N, WGS84)
 # Locate the path of shapefile in your computer.
-shapefile_path = "D:/Study/Assignment/Module III/Geospatial Workflow/Project/Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.shp"
+shapefile_path = "Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.shp"
 gdf = gpd.read_file(shapefile_path)
 
 #IMPORTANT: Ensure projection of shapefile to "WGS84" so that everything goes fine while plotting map.
@@ -46,11 +46,11 @@ gdf = gdf.to_crs("WGS84")
 #gdf.to_file("D:/Study/Assignment/Module III/Geospatial Workflow/Project/Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson")
 
 #load the above geojson file. Locate the path of geojson file in your computer.
-gjson = json.load(open("D:/Study/Assignment/Module III/Geospatial Workflow/Project/Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson"))
+gjson = json.load(open("Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson"))
 
 # Locate the path of excel spreadsheet in your computer.
 #load the excel spreadsheet using pandas to make it a dataframe. The data was downloaded from Agmarket portal, Govt. of India.
-df = pd.read_excel("D:/Study/Assignment/Module III/Geospatial Workflow/Data/Compiled Data.xlsx")
+df = pd.read_excel("Data/Compiled Data.xlsx")
 
 #format the date in dataframe to process further.
 df["Reported Date"]=pd.to_datetime(df["Reported Date"], format="mixed")
