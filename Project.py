@@ -30,7 +30,7 @@ userPasswordPairs = [['Project', 'Password@123'], ['Sameer', 'Sameer@123'], ['Us
 
 #To define rows and columns, here premade CSS stylsheet ('VAPOR') has been used which is available within dash.
 app = Dash(__name__, external_stylesheets=[dbc.themes.VAPOR])
-
+server = app.server
 login = dash_auth.BasicAuth(app, userPasswordPairs)
 
 ###################### Prepare the data
