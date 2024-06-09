@@ -257,7 +257,7 @@ def update_graph(market, commodity, startDate, endDate, choice, chart, orderValu
         geojson=gdf, #geodata frame or geojson file
         color=choice, #color as per the selected option: min, max, or modal price, or arrival weight of commodity
         mapbox_style="open-street-map", #acts as basemap. Need internet connection to download. It appears below shapefile.
-        center = {"lat": 29.6, "lon": 78.9}, #This is the coordinates which will be centered for representation of map. The coordinate value has been so selected that whole Mandis of Uttarkhand appears.
+        center = {"lat": 29.8, "lon": 78.9}, #This is the coordinates which will be centered for representation of map. The coordinate value has been so selected that whole Mandis of Uttarkhand appears.
         zoom=7,
         locations='Market Name', #That column name in dataframe which refers to location (same spelling as in shapefile attribute). So, it will depend on market(s) selected by user.
         hover_data={"Commodity":True}, #The data that will appear on hovering cursor over map.
