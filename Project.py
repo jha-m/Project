@@ -43,7 +43,7 @@ gdf = gpd.read_file(shapefile_path)
 #IMPORTANT: Ensure projection of shapefile to "WGS84" so that everything goes fine while plotting map.
 gdf = gdf.to_crs("WGS84")
 #This geodataframe was converted to geojson file and saved in local folder. The below code has been commented because the file has been already saved.
-#gdf.to_file("D:/Study/Assignment/Module III/Geospatial Workflow/Project/Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson")
+#gdf.to_file("Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson")
 
 #load the above geojson file. Locate the path of geojson file in your computer.
 gjson = json.load(open("Shapefile/UTTARAKHAND_SUBDISTRICT_BDY.geojson"))
